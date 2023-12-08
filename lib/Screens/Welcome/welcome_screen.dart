@@ -88,6 +88,15 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       horizontal: defaultPadding * 5),
                   child: Column(
                     children: [
+                      Text('Fill in the details related to your wedding below',
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyLarge!
+                              .copyWith(
+                                  fontSize: 16,
+                                  color: Colors.black54,
+                                  fontWeight: FontWeight.bold)),
+                      const SizedBox(height: defaultPadding * 2),
                       Padding(
                         padding: const EdgeInsets.symmetric(
                             vertical: defaultPadding),
@@ -256,19 +265,32 @@ END:VEVENT
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Quetdi.com',
-                  style: Theme.of(context).textTheme.headlineMedium!.copyWith(
-                        fontWeight: FontWeight.bold,
-                        color: kPrimaryColor,
-                      )),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Image.asset(
+                    'assets/icons/favicon.png',
+                    height: 60,
+                  ),
+                  Text('Quetdi.com',
+                      style:
+                          Theme.of(context).textTheme.headlineMedium!.copyWith(
+                                fontWeight: FontWeight.bold,
+                                color: kPrimaryColor,
+                              )),
+                ],
+              ),
               const SizedBox(height: defaultPadding / 2),
-              Text(
-                'Where the vibrant hues of life begin – A unique connectivity platform where every detail of the wedding becomes exquisite, and the realm of joy is \'scanned away\' with care and precision',
-                style: TextStyle(
-                    height: 2,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 16,
-                    color: kPrimaryColor.withOpacity(0.7)),
+              const Padding(
+                padding: EdgeInsets.only(left: 16),
+                child: Text(
+                  'Where the vibrant hues of life begin – A unique connectivity platform where every detail of the wedding becomes exquisite, and the realm of joy is \'scanned away\' with care and precision',
+                  style: TextStyle(
+                      height: 2,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      color: Colors.black45),
+                ),
               ),
             ],
           ),
