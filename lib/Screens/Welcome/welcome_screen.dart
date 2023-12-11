@@ -570,8 +570,8 @@ class _MobileWelcomeScreenState extends State<MobileWelcomeScreen> {
 BEGIN:VEVENT
 SUMMARY:${summaryController.text}
 LOCATION:${locationController.text}
-DTSTART:${DateFormat('yyyyMMddTHHmmss').format(startTime.toUtc())}
-DTEND:${DateFormat('yyyyMMddTHHmmss').format(endTime.toUtc())}
+DTSTART:${DateFormat('yyyyMMddTHHmmss').format(startTime.toLocal())}
+DTEND:${DateFormat('yyyyMMddTHHmmss').format(endTime.toLocal())}
 BEGIN:VALARM
 TRIGGER:-PT${reminderHours}H
 DESCRIPTION:Reminder

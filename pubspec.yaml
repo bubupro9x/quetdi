@@ -28,6 +28,7 @@ dependencies:
   qr_flutter:
   widgets_to_image:
   image_downloader_web:
+  web_image_downloader:
 
 dev_dependencies:
   flutter_test:
