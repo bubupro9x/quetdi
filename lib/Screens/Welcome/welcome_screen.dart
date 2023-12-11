@@ -10,11 +10,7 @@ import 'package:widgets_to_image/widgets_to_image.dart';
 import '../../components/background.dart';
 import '../../constants.dart';
 import '../../responsive.dart';
-import 'components/login_signup_btn.dart';
-import 'components/welcome_image.dart';
 import 'dart:async';
-import 'dart:ui';
-import 'package:flutter/rendering.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);

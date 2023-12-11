@@ -1,8 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:quetdi.com/Screens/Welcome/welcome_screen.dart';
 import 'package:quetdi.com/constants.dart';
+import 'dart:html' as html;
 
-void main() => runApp(const MyApp());
+
+
+void redirectToNewUrl(String newUrl) {
+  var currentUrl = html.window.location.href;
+
+  html.window.location.href = newUrl;
+
+  html.window.history.pushState(null, '', 'www.quetdi.com');
+}
+
+
+void main() {
+  redirectToNewUrl('https://quetdi.teleporthq.app');
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
